@@ -120,7 +120,7 @@ author_name: "Your Name"
 author_email: "your.email@example.com"
 github_username: "yourusername"
 project_directory: "/path/to/your/projects"
-python_version: "3.12"
+python_version: "3.14"
 ```
 
 ## Development
@@ -152,7 +152,7 @@ make check               # Run all checks
 ### 2. CLI Applications
 - **Typer-based** command-line interfaces with rich output
 - **Multiple commands** with help, configuration, and interactive prompts
-- **Global installation** via pipx for system-wide access
+- **Global editable installation** via `uv tool` for system-wide access
 
 ### 3. FastAPI Web Applications
 - **Production-ready** FastAPI applications with Docker

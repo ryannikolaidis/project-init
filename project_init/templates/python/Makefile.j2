@@ -68,11 +68,11 @@ version-release: ## Bump minor version for release
 build: ## Build package for distribution
 	uv build
 
-install-package: build ## Install package globally with pipx
-	pipx install . -f
+install-package: ## Install package globally in editable mode with uv tool
+	uv tool install --editable .
 
-uninstall-package: ## Uninstall package from pipx
-	pipx uninstall {{ project_name }}
+uninstall-package: ## Uninstall package from uv tool
+	uv tool uninstall {{ project_name }}
 
 clean: ## Clean up build artifacts
 	rm -rf build/

@@ -15,7 +15,7 @@ def test_project_config_creation():
         author_email="test@example.com",
         github_username="testuser",
         target_directory=Path("/tmp/test-project"),
-        python_version="3.12",
+        python_version="3.14",
         package_name="test_project",
         entry_point=True,
         create_api=False,
@@ -27,7 +27,7 @@ def test_project_config_creation():
     assert config.description == "A test project"
     assert config.author_name == "Test Author"
     assert config.author_email == "test@example.com"
-    assert config.python_version == "3.12"
+    assert config.python_version == "3.14"
     assert config.package_name == "test_project"
     assert config.entry_point is True
     assert config.create_api is False
@@ -46,7 +46,7 @@ def test_to_template_vars():
         author_email="test@example.com",
         github_username="testuser",
         target_directory=Path("/tmp/test-project"),
-        python_version="3.12",
+        python_version="3.14",
         package_name="test_project",
         entry_point=False,
         create_api=False,
@@ -60,7 +60,7 @@ def test_to_template_vars():
     assert variables["description"] == "A test project"
     assert variables["author_name"] == "Test Author"
     assert variables["author_email"] == "test@example.com"
-    assert variables["python_version"] == "3.12"
+    assert variables["python_version"] == "3.14"
     assert variables["package_name"] == "test_project"
     assert variables["entry_point"] is False
     assert variables["create_api"] is False

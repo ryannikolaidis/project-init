@@ -32,7 +32,7 @@ config = ProjectConfig(
     author_email="jane@example.com",
     github_username="janedoe",
     target_directory=Path("./my-project"),
-    python_version="3.12",
+    python_version="3.14",
     package_name="my_project",
     entry_point=True,
 )

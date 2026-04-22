@@ -18,7 +18,7 @@ class UserDefaults:
     author_name: str = "Your Name"
     author_email: str = "your.email@example.com"
     github_username: str = "yourusername"
-    python_version: str = "3.12"
+    python_version: str = "3.14"
     entry_point_default: bool = False
     project_type: str = "python"
     project_directory: str | None = None
@@ -64,7 +64,7 @@ class ConfigManager:
                 author_name=defaults_data.get("author_name", "Your Name"),
                 author_email=defaults_data.get("author_email", "your.email@example.com"),
                 github_username=defaults_data.get("github_username", "yourusername"),
-                python_version=defaults_data.get("python_version", "3.12"),
+                python_version=defaults_data.get("python_version", "3.14"),
                 entry_point_default=defaults_data.get("entry_point_default", False),
                 project_type=defaults_data.get("project_type", "python"),
                 project_directory=defaults_data.get("project_directory"),
@@ -84,7 +84,7 @@ class ConfigManager:
                 "author_name": "Ryan Nikolaidis",
                 "author_email": "ryannikolaidis@gmail.com",
                 "github_username": "ryannikolaidis",
-                "python_version": "3.12",
+                "python_version": "3.14",
                 "entry_point_default": False,
                 "project_type": "python",
                 "project_directory": "/Users/ryannikolaidis/Development/",

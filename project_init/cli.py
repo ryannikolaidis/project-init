@@ -112,8 +112,13 @@ def init(
         console.print(f"   cd {config.project_name}")
 
         if config.project_type == "python":
-            console.print("   make install-dev")
-            console.print("   uv run pre-commit install")
+            if config.entry_point:
+                console.print("   make install-dev")
+                console.print("   uv tool install --editable .")
+                console.print("   uv run pre-commit install")
+            else:
+                console.print("   make install-dev")
+                console.print("   uv run pre-commit install")
         elif config.project_type == "bash":
             script_name = config.extra_context.get("script_name", "run.sh")
             console.print(f"   chmod +x scripts/{script_name}")
@@ -196,7 +201,7 @@ def collect_project_info(
 
     if project_type == "python":
         python_version = Prompt.ask(
-            "Python version", choices=["3.12", "3.11", "3.10"], default=defaults.python_version
+            "Python version", choices=["3.14", "3.13", "3.12"], default=defaults.python_version
         )
 
         suggested_package_name = snake_case(project_name)

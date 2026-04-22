@@ -14,7 +14,7 @@
 {% if entry_point %}- **CLI Application** with Typer framework
 - **Rich terminal output** with colors and formatting
 - **Interactive commands** with help and configuration
-- **Global installation** support via pipx
+- **Global editable installation** support via `uv tool`
 {% else %}- **Python Library** with modern packaging
 - **Reusable functions** and clean API design
 {% endif %}
@@ -40,24 +40,23 @@ make install-dev
 
 ### Global Installation{% if entry_point %}
 
-Install {{ package_name }} globally using pipx (recommended):
+Install {{ package_name }} globally in editable mode using `uv tool`:
 
 ```bash
-# Build and install globally
+# Install globally in editable mode
 make install-package
 
 # Or manually:
-make build
-pipx install .
+uv tool install --editable .
 ```
 
-After installation, you can use the `{{ project_name }}` command from anywhere.
+This puts `{{ project_name }}` on your `PATH` and reflects local source changes without reinstalling.
 
 ### Uninstall
 
 ```bash
 make uninstall-package
-# Or: pipx uninstall {{ package_name }}
+# Or: uv tool uninstall {{ project_name }}
 ```{% else %}
 
 This is a Python library. Install it in your project:

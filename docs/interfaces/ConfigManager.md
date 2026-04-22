@@ -38,7 +38,7 @@ defaults:
   author_name: Ryan Nikolaidis
   author_email: ryannikolaidis@gmail.com
   github_username: ryannikolaidis
-  python_version: '3.12'
+  python_version: '3.14'
   entry_point_default: false
   project_type: python
   project_directory: /Users/ryannikolaidis/Development/
